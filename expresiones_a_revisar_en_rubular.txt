@@ -1,0 +1,13 @@
+/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
+user@example.com 
+USER@foo.COM 
+A_US-ER@foo.bar.org
+first.last@foo.jp alice+bob@baz.cn
+
+
+
+user@example,com 
+user_at_foo.org 
+user.name@example.
+foo@bar_baz.com foo@bar+baz.com
