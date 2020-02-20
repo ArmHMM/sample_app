@@ -9,6 +9,8 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
         #@user = users(:pepito)
 	@admin = users(:example)
 	@non_admin = users(:pepito)
+	@non_activated_user = users(:juan)
+	@activated_user = users(:rr)
     end
     
     # added feb 18, 2020
@@ -16,7 +18,7 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
         log_in_as(@admin)
         get users_path
         assert_template 'users/index'
-        assert_select 'div.pagination'
+        #assert_select 'div.pagination'
         User.paginate(page: 1).each do |user|
             assert_select 'a[href=?]', user_path(user), text: user.name
         end
@@ -26,7 +28,7 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
 	log_in_as(@admin)
 	get users_path
 	assert_template 'users/index'
-	assert_select 'div.pagination'
+	#assert_select 'div.pagination'
 	first_page_of_users = User.paginate(page: 1)
 	first_page_of_users.each do |user|
 		assert_select 'a[href=?]', user_path(user), text: user.name
@@ -44,4 +46,6 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
 	get users_path
 	assert_select 'a', text: 'delete', count: 0
     end
+
+    
 end
