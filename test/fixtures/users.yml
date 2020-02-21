@@ -30,19 +30,6 @@ juan:
         activated: true
         activated_at: <%= Time.zone.now %>
 
-rr:
-        name: RR
-        email: r1@example.com
-        password_digest: <%= User.digest('password') %>
-        activated: true
-        activated_at: <%= Time.zone.now %>
-          
-rr2:
-        name: RR2
-        email: r2@example.com
-        password_digest: <%= User.digest('password') %>
-        activated: true
-        activated_at: <%= Time.zone.now %>
 
         # added in feb 18, 2020
 #<% 30.times do |n| %>

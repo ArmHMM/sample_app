@@ -67,6 +67,7 @@ Rails.application.configure do
   
   
   # modified feb 19, 2020
+  # configuration for production ...
   #config.action_mailer.raise_delivery_errors = true
   #config.action_mailer.delivery_method = :smtp
   #host = ''

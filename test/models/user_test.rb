@@ -77,10 +77,4 @@ class UserTest < ActiveSupport::TestCase
 	  assert_not @user.authenticated?(:remember,'')
   end
   
-  # feb 19, 2020
-  # ex 3 section 11.3.3
-  test "" do
-      
-  end
-  
 end
